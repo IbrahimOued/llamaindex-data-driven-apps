@@ -216,7 +216,7 @@ from typing import List, Optional
 import torch
 import os
 
-HF_TOKEN: Optional[str] = os.environ("HF_TOKEN")
+HF_TOKEN: Optional[str] = os.environ["HF_TOKEN"]
 
 model_name: str = "meta-llama/Meta-Llama-3-8B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(

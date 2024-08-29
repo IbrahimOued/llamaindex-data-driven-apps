@@ -8,7 +8,7 @@ from llama_index.llms.huggingface import HuggingFaceLLM
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core.llms import ChatMessage
 # %%
-HF_TOKEN: Optional[str] = os.environ("HF_TOKEN")
+HF_TOKEN: Optional[str] = os.environ["HF_TOKEN"]
 
 model_name: str = "meta-llama/Meta-Llama-3-8B-Instruct"
 # %%

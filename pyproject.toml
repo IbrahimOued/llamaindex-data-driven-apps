@@ -29,6 +29,7 @@ tree-sitter-languages = "^1.10.2"
 chromadb = "^0.5.5"
 rank-bm25 = "^0.2.2"
 spacy = "^3.7.6"
+llama-index-tools-database = "^0.2.0"
 
 
 
