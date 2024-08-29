@@ -1,0 +1,3 @@
+sSeparating domain classes from implementation in a project can be crucial for maintaining clean and
+understandable code. Here’s a general approach to programmatically identify and isolate domain classes:
+

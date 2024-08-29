@@ -1,0 +1,107 @@
+Separating domain classes from implementation in a project can be crucial for maintaining clean and
+understandable code. Here’s a general approach to programmatically identify and isolate domain classes:
+
+1. Understand Domain-Driven Design (DDD): Familiarize yourself with DDD principles, which
+emphasize modeling the problem domain in software development. This will help you identify
+domain concepts, entities, value objects, and aggregates.
+2. Static Analysis Tools: Utilize static code analysis tools to extract class dependencies and relations.
+Tools like Understand, SonarQube, or SourceMonitor can help you visualize class dependencies and
+identify domain-specific classes based on their usage patterns.
+3. Semantic Analysis: Analyze the semantics of class names, method names, and comments to infer
+their purpose and domain relevance. Classes with names like BankAccount , Transaction , or
+Customer are likely to be domain-related.
+4. Natural Language Processing (NLP): Use NLP techniques to analyze comments, documentation,
+and naming conventions within the codebase. NLP can help identify domain-specific terminology and
+concepts.
+5. Pattern Matching: Implement pattern matching algorithms to identify common design patterns
+used in domain modeling, such as Aggregate Roots, Value Objects, or Repositories.
+6. Machine Learning (ML) Clustering: While you’ve mentioned that clustering methods with
+embeddings vectors were inefficient, it’s worth exploring more advanced ML techniques tailored to
+your specific problem. Consider using techniques like hierarchical clustering, density-based
+clustering, or dimensionality reduction techniques like t-SNE or PCA.
+7. Feedback Loop: Iterate on your approach based on feedback from domain experts and code
+reviews. Domain experts can provide valuable insights into which classes are truly domain-related
+and which are not.
+8. Manual Review: Despite the automation, manual review is often necessary to validate the results
+and refine the separation of domain classes from implementation details.
+9. Refactoring Tools: Utilize refactoring tools available in IDEs to move identified domain classes into
+separate packages or modules. This ensures that domain classes are physically separated from
+implementation details.
+10. Continuous Improvement: Keep refining your approach based on the evolving requirements and
+changes in the codebase. As the project progresses, the understanding of the domain may deepen,
+leading to further refinements in the separation of domain classes.
+Remember that there is no one-size-fits-all solution, and the effectiveness of each approach may vary
+depending on the size and complexity of the project, as well as the specific domain being modeled.
+Experiment with different techniques and combinations thereof to find the most effective approach for
+your project.Here are some ways to separate programmatically domain classes from implementation inside a project:
+1. Look for Business Logic vs. Technical Logic:
+Domain classes typically handle the core business logic of the application. This includes entities, their
+attributes, and the behavior specific to the domain. For example, in a banking application, a
+BankAccount class would be a domain class. It would have attributes like account number, balance,
+and methods for deposit, withdrawal, etc.
+Implementation details, on the other hand, deal with how things are done, rather than what is done.
+This includes classes that interact with databases, external services, file systems, or UI frameworks.
+In our banking example, a DatabaseAdapter class that saves account information to a database
+would be an implementation detail.
+2. Identify Dependencies:
+Domain classes should ideally have minimal dependencies on implementation classes. This makes
+the domain logic independent of the chosen technologies or frameworks.
+If a class depends heavily on implementation details like database access or UI elements, it’s likely an
+implementation class.
+3. Use Design Patterns:
+Some design patterns can help separate domain logic from implementation. For instance, the
+Repository pattern can hide the way data is persisted behind a clean interface. This allows the
+domain classes to interact with data without knowing how it’s stored.
+Challenges of Automatic Domain Identification:
+While your approach of using clustering methods and embedding vectors is interesting, it can be
+challenging to achieve high accuracy because code can be written in many styles.
+Domain concepts can also be intertwined with implementation logic, making it difficult for
+algorithms to differentiate between the two.
+
+Recommendations:
+
+Manual Analysis: For complex projects, manually analyzing class names, comments, and code
+functions is often the most effective way to identify domain classes.
+Start Small: Begin by focusing on a small, well-defined section of the codebase. This will help you to
+develop a better understanding of the project’s domain and how it’s implemented.
+Focus on Key Concepts: Identify the core entities and processes of the application. The classes that
+represent these concepts are likely to be domain classes.
+By following these techniques, you can improve your ability to separate domain classes from
+implementation details, even in a large and complex codebase.
+Yes, using call graphs and graph metrics on classes can be a helpful technique for identifying domain
+classes, though it has limitations. Here’s why it can be interesting and the potential limitations to
+consider:Interesting aspects of using call graphs:
+Relationships between classes: Call graphs show how classes interact with each other through
+method calls. This can reveal which classes collaborate to achieve domain functionality. Classes that
+are central to many domain-related calls might be good candidates for domain classes.
+Identifying core functionalities: By analyzing the calls within a class, you can see if it interacts with
+various domain concepts or focuses on specific implementation details.
+
+Graph metrics for identifying domain classes:
+
+Centrality metrics: Metrics like PageRank or Eigenvector centrality can indicate how influential a
+class is within the call graph. Classes with high centrality scores, especially if they are called by many
+other domain-related classes, could be domain classes.
+Clustering coefficient: This metric shows how tightly connected a class is with its neighbors. Classes
+with high clustering coefficients within a cluster of domain-related classes are more likely to be
+domain classes themselves.
+
+Limitations to consider:
+
+Focus on interactions: Call graphs primarily capture interactions, not semantics. A class heavily
+interacting with domain classes could still be an implementation detail (e.g., a logging class).
+Algorithmic limitations: Metrics like centrality can be influenced by factors unrelated to the
+domain. Additionally, some domain classes might not be central to the call flow.
+Here’s how to improve your approach:
+Combine with other techniques: Use call graph analysis alongside techniques like manual code
+review and analysis of class names and comments. This multi-pronged approach leads to more
+robust identification.
+
+Focus on specific metrics: Don’t rely solely on a single metric. Look for classes with high centrality
+scores within clusters with high domain-related call density.
+Domain knowledge is key: Having a good understanding of the application’s domain helps in
+interpreting the call graph and metrics. This allows you to filter out false positives and identify
+classes crucial to the domain.
+In conclusion, using call graphs and graph metrics can be a valuable tool in your arsenal for identifying
+domain classes. However, it’s best used in conjunction with other techniques and domain knowledge for
+the most accurate results

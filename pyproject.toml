@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "llamaindex-ddapps"
+version = "0.1.0"
+description = ""
+authors = ["Ibrahim Ouedraogo <ibrahim.ouedraogo@umontreal.ca>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+llama-index = "^0.11.1"
+pypdf = "^4.3.1"
+streamlit = "^1.37.1"
+llama-index-llms-huggingface = "^0.3.1"
+llama-index-llms-huggingface-api = "^0.2.0"
+ipykernel = "^6.29.5"
+ipywidgets = "^8.1.5"
+llama-index-embeddings-huggingface = "^0.3.0"
+llama-index-embeddings-huggingface-api = "^0.2.0"
+wikipedia = "^1.4.0"
+llama-index-readers-wikipedia = "^0.2.0"
+pyyaml = "^6.0.2"
+langchain = "^0.2.14"
+tree-sitter-python = "^0.21.0"
+llama-index-extractors-entity = "^0.2.0"
+llama-index-readers-database = "^0.2.0"
+llama-index-readers-web = "^0.2.1"
+tree-sitter = "^0.22.3"
+tree-sitter-languages = "^1.10.2"
+chromadb = "^0.5.5"
+rank-bm25 = "^0.2.2"
+spacy = "^3.7.6"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
