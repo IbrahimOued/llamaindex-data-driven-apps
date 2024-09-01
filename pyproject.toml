@@ -30,6 +30,7 @@ chromadb = "^0.5.5"
 rank-bm25 = "^0.2.2"
 spacy = "^3.7.6"
 llama-index-tools-database = "^0.2.0"
+llama-index-packs-agents-llm-compiler = "^0.2.0"
 
 
 
