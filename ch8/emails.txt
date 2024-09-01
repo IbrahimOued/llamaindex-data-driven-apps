@@ -1,8 +1,1 @@
-To: {}
-Subject: 10% Raise Announcement
-Dear {},
-
-You are receiving this email because your salary is lower than the average organization salary. We are pleased to inform you that you will be receiving a 10% raise, effective immediately.
-
-Best regards,
-[Your Name]
+Subject: Salary Increase\n\nDear {name},\n\nWe are pleased to inform you that your salary has been increased by 10%. Your new salary will be {new_salary}. This change is effective immediately.\n\nBest regards,\nThe IT Department\n\n
